@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import './nav.css';
 import React, { useEffect, useState } from 'react';
 import Typography from '@mui/material/Typography';
 import '@fontsource/roboto/300.css';
@@ -7,6 +8,10 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import Button from "@mui/material/Button";
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+
+
 function App() {
   const [weather, setWeather] = useState({});
   const [locations, setLocations] = useState("london");
@@ -55,22 +60,28 @@ function App() {
       })
       .then((data) => {
         console.log(data);
-        setPhotos(data?.results[0]?.urls?.raw);
+        setPhotos(data?.results[0,1,2,3]?.urls?.raw);
       })
       .catch((error) => console.log(error));
   }
 
   return (
+    <div className="nav">
+      <h1 className="nav_text">Weather App</h1>
     <div className="App">
       <div className="wrapper">
         <div className="Search">
-          <input type="text" value={locations} onChange={(e) => setLocations(e.target.value)} placeholder="Enter Location" className="location_input" />
-          <Button variant="contained" color="success" onClick={submit}>Search</Button>
+          <TextField required id="outlined-required"  Label ="Required "value={locations} onChange={(e) => setLocations(e.target.value)} placeholder="Enter Location"  />
+         <div className= "Search_button"> <Button variant="contained" color="success" onClick={submit}>Search</Button></div>
         </div>
         <div className="app_data">
           <p className="temp"> Current Temp: {weather?.main?.temp}</p>
+          <p className="feels_like">Feels Like :{weather?.main?.feels_like}</p>
         </div>
+       
         <img className="app_image" src={photos} alt="" />
+      
+      </div>
       </div>
     </div>
   )

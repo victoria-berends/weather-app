@@ -1,0 +1,16 @@
+
+.nav {display: flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  align-items: stretch;
+  background: rgb(40, 43, 84);
+  height:110vh;
+  width:100vw;
+  border-bottom: 25px;
+
+  }
+  .nav_text {
+color: azure;
+padding-left: 100px;
+font-size: 60px;
+  }
