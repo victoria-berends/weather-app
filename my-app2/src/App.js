@@ -1,7 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useEffect, useState } from 'react';
-//import Button from "@mui/material/Button";//
+import Typography from '@mui/material/Typography';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+import Button from "@mui/material/Button";
 function App() {
   const [weather, setWeather] = useState({});
   const [locations, setLocations] = useState("london");
@@ -60,7 +65,7 @@ function App() {
       <div className="wrapper">
         <div className="Search">
           <input type="text" value={locations} onChange={(e) => setLocations(e.target.value)} placeholder="Enter Location" className="location_input" />
-          <button onClick={submit}>Search</button>
+          <Button variant="contained" color="success" onClick={submit}>Search</Button>
         </div>
         <div className="app_data">
           <p className="temp"> Current Temp: {weather?.main?.temp}</p>
