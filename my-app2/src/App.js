@@ -10,7 +10,7 @@ import '@fontsource/roboto/700.css';
 import Button from "@mui/material/Button";
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import img from './Heraldic_Sun.png';
+import img from './assets/images/Heraldic_Sun.png';
 import { width } from '@mui/system';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
@@ -79,7 +79,10 @@ function App() {
       </div>
 </a> */}
 <h1 className="nav_text">WEATHER APP</h1>
-    </div><div className="App">
+<img className="lilLogo" src={`${process.env.PUBLIC_URL}/assets/images/Heraldic_Sun.png`} 
+     alt="logo"/>
+    </div>
+    <div className="App">
   
         <div className="wrapper">
           <div className="Search">
