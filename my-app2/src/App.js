@@ -1,6 +1,7 @@
 
 import './App.css';
 import './nav.css';
+import './nav.js';
 import React, { useEffect, useState } from 'react';
 
 import '@fontsource/roboto/300.css';
@@ -68,17 +69,8 @@ function App() {
 
   return (
     
-    <><div className="nav">
-   {/* <a className="nav_text" href="/">WEATHER</a> 
-   <a className="nav_text" href="/">
-      <div className="logo-image">
-            <img src={'Heraldic_Sun.png'}className="lilLogo"></img>
-      </div>
-</a> */}
-<h1 className="nav_text">WEATHER APP</h1>
-<div className="lilLogo">
-    <img className="sun" src={img}/>
-    </div></div>
+  <div>
+    <Nav />
     <div className="App">
   
         <div className="wrapper">
@@ -94,7 +86,7 @@ function App() {
           <img className="app_image" src={photos} alt="" />
 
         </div>
-      </div></>
+      </div></div>
     
   )
 }
