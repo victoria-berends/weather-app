@@ -1,19 +1,16 @@
-import logo from './logo.svg';
+
 import './App.css';
 import './nav.css';
 import React, { useEffect, useState } from 'react';
-import Typography from '@mui/material/Typography';
+
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import Button from "@mui/material/Button";
-import Box from '@mui/material/Box';
+
 import TextField from '@mui/material/TextField';
-import img from './assets/images/Heraldic_Sun.png';
-import { width } from '@mui/system';
-import Avatar from '@mui/material/Avatar';
-import Stack from '@mui/material/Stack';
+import img from './Heraldic_Sun.png';
 
 
 function App() {
@@ -79,9 +76,9 @@ function App() {
       </div>
 </a> */}
 <h1 className="nav_text">WEATHER APP</h1>
-<img className="lilLogo" src={`${process.env.PUBLIC_URL}/assets/images/Heraldic_Sun.png`} 
-     alt="logo"/>
-    </div>
+<div className="lilLogo">
+    <img className="sun" src={img}/>
+    </div></div>
     <div className="App">
   
         <div className="wrapper">
@@ -90,8 +87,8 @@ function App() {
             <div className="Search_button"> <Button variant="contained" color="success" onClick={submit}>Search</Button></div>
           </div>
           <div className="app_data">
-            <p className="temp"> Current Temp: {weather?.main?.temp}</p>
-            <p className="feels_like">Feels Like :{weather?.main?.feels_like}</p>
+            <p className="temp"> <h1 >Current Temp: {weather?.main?.temp}</h1></p>
+            <p className="feels_like"><h1>Feels Like :{weather?.main?.feels_like}</h1></p>
           </div>
 
           <img className="app_image" src={photos} alt="" />

@@ -45,3 +45,14 @@ border:1px solid white;
   margin: 15px;
  
 }
+
+h1{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: x-large;
+  display: flex;
+  flex-direction:column-reverse;
+justify-content:flex-end;
+align-content: center;
+align-items: center;
+
+}
