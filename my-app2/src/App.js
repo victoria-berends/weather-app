@@ -1,7 +1,7 @@
 
 import './App.css';
 import './nav.css';
-import './Nav.js';
+import Nav from './Nav.js';
 import React, { useEffect, useState } from 'react';
 
 import '@fontsource/roboto/300.css';
