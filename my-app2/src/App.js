@@ -1,7 +1,7 @@
 
 import './App.css';
 import './nav.css';
-import './nav.js';
+import './Nav.js';
 import React, { useEffect, useState } from 'react';
 
 import '@fontsource/roboto/300.css';
@@ -70,7 +70,7 @@ function App() {
   return (
     
   <div>
-    <Nav />
+    <Nav/>
     <div className="App">
   
         <div className="wrapper">
