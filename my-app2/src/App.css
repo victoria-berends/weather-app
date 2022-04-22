@@ -1,7 +1,8 @@
 
 .App {display: flex;
-  flex-direction:column;
-justify-content:center;
+  flex-direction:column-reverse;
+justify-content:flex-end;
+align-content: center;
 align-items: center;
 background: rgb(33, 32, 30);
 height:100vh;

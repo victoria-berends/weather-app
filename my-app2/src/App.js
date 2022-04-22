@@ -10,6 +10,10 @@ import '@fontsource/roboto/700.css';
 import Button from "@mui/material/Button";
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+import img from './Heraldic_Sun.png';
+import { width } from '@mui/system';
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
 
 
 function App() {
@@ -66,24 +70,32 @@ function App() {
   }
 
   return (
-    <div className="nav">
-      <h1 className="nav_text">Weather App</h1>
-    <div className="App">
-      <div className="wrapper">
-        <div className="Search">
-          <TextField required id="outlined-required"  Label ="Required "value={locations} onChange={(e) => setLocations(e.target.value)} placeholder="Enter Location"  />
-         <div className= "Search_button"> <Button variant="contained" color="success" onClick={submit}>Search</Button></div>
-        </div>
-        <div className="app_data">
-          <p className="temp"> Current Temp: {weather?.main?.temp}</p>
-          <p className="feels_like">Feels Like :{weather?.main?.feels_like}</p>
-        </div>
-       
-        <img className="app_image" src={photos} alt="" />
-      
+    
+    <><div className="nav">
+   {/* <a className="nav_text" href="/">WEATHER</a> 
+   <a className="nav_text" href="/">
+      <div className="logo-image">
+            <img src={'Heraldic_Sun.png'}className="lilLogo"></img>
       </div>
-      </div>
-    </div>
+</a> */}
+<h1 className="nav_text">WEATHER APP</h1>
+    </div><div className="App">
+  
+        <div className="wrapper">
+          <div className="Search">
+            <TextField required id="outlined-required" Label="Required " value={locations} onChange={(e) => setLocations(e.target.value)} placeholder="Enter Location" />
+            <div className="Search_button"> <Button variant="contained" color="success" onClick={submit}>Search</Button></div>
+          </div>
+          <div className="app_data">
+            <p className="temp"> Current Temp: {weather?.main?.temp}</p>
+            <p className="feels_like">Feels Like :{weather?.main?.feels_like}</p>
+          </div>
+
+          <img className="app_image" src={photos} alt="" />
+
+        </div>
+      </div></>
+    
   )
 }
 
